@@ -26,27 +26,21 @@ class MainActivity : ComponentActivity() {
         }
         setContent {
             CurrencyConverterTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    CurrencyConverterScreen()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     CurrencyConverterTheme {
-        Greeting("Android")
+        CurrencyConverterScreen()
     }
 }
